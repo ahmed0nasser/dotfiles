@@ -9,20 +9,18 @@ config.font = wezterm.font_with_fallback({
 	"Noto Naskh Arabic",
 	"Noto Sans",
 })
-config.warn_about_missing_glyphs = false
 
 -- BIDI for Arabic support
 config.bidi_enabled = true
 config.use_ime = true
 
--- Colors
-config.colors = {
-	cursor_bg = "#E5E5E5",
-	cursor_border = "#E5E5E5",
-}
+-- Color Scheme
+config.color_scheme = 'Argonaut (Gogh)'
 
+-- Minimalization
 config.window_decorations = 'RESIZE'
 config.enable_tab_bar = false
+config.warn_about_missing_glyphs = false
 
 -- Key bindings
 config.keys = {
