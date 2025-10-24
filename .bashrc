@@ -15,8 +15,9 @@ if type rg &> /dev/null; then
 fi
 
 # Aliasses
-alias pn=pnpm
+alias sudo='sudo '
 alias vim=nvim
+alias pn=pnpm
 # freeoffice aliasses
 alias word=freeoffice-textmaker
 alias excel=freeoffice-planmaker

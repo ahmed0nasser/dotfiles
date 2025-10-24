@@ -1,0 +1,22 @@
+{
+    "redhat.telemetry.enabled": false,
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "editor.fontSize": 24,
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Dracula Theme",
+    "workbench.activityBar.location": "hidden",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "workbench.sideBar.location": "right",
+    "workbench.editor.showTabs": "none",
+    "workbench.editor.editorActionsLocation": "hidden",
+    "window.menuBarVisibility": "compact",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.cursorBlinking": "solid",
+    "workbench.statusBar.visible": false
+}
