@@ -13,10 +13,15 @@
     "workbench.sideBar.location": "right",
     "workbench.editor.showTabs": "none",
     "workbench.editor.editorActionsLocation": "hidden",
-    "window.menuBarVisibility": "compact",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
     "editor.cursorBlinking": "solid",
+    "editor.formatOnSave": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "window.menuBarVisibility": "compact",
     "workbench.statusBar.visible": false
 }
