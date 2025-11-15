@@ -16,6 +16,7 @@ fi
 
 # Aliasses
 alias sudo='sudo '
+alias vim='nvim '
 alias pn=pnpm
 # freeoffice aliasses
 alias word=freeoffice-textmaker
