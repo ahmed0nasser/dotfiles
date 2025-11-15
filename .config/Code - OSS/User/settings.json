@@ -22,6 +22,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true
     },
-    "window.menuBarVisibility": "compact",
-    "workbench.statusBar.visible": false
+    "zenMode.showTabs": "none",
+    "workbench.statusBar.visible": false,
+    "editor.fontFamily": "' CaskaydiaCove Nerd Font'"
 }
