@@ -15,7 +15,7 @@ config.bidi_enabled = true
 config.use_ime = true
 
 -- Color Scheme
-config.color_scheme = 'Chester'
+config.color_scheme = 'Dark Pastel (Gogh)'
 
 -- Minimalization
 config.window_decorations = 'RESIZE'
