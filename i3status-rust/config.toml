@@ -1,0 +1,96 @@
+# i3status-rs configuration (for X11)
+# Includes: date/time, wifi, keyboard layout (US/EG), memory, CPU, battery, volume
+
+icons_format = "{icon}"
+
+[theme]
+theme = "solarized-dark"
+[theme.overrides]
+idle_bg = "#123456"
+idle_fg = "#abcdef"
+
+[icons]
+icons = "awesome4"
+[icons.overrides]
+#bat = ["|E|", "|_|", "|=|", "|F|"]
+#bat_charging = "|^| "
+
+###########
+# Blocks
+###########
+
+# CPU Usage
+[[block]]
+block = "cpu"
+info_cpu = 20
+warning_cpu = 50
+critical_cpu = 90
+format = "  $utilization.eng(w:2) "
+
+# Memory Usage
+[[block]]
+block = "memory"
+format = "  $mem_used.eng(prefix:Mi)/$mem_total.eng(prefix:Mi)($mem_used_percents.eng(w:2)) "
+
+# Wi-Fi / Network
+[[block]]
+block = "net"
+# Set your interface name if needed (check with `ip link`)
+device = "wlan0"
+format = " $icon { $ssid ($signal_strength) | Wired } "
+missing_format = " $icon × Disconnected "
+inactive_format = " $icon Down "
+
+# Keyboard Layout (X11)
+[[block]]
+#block = "keyboard_layout"
+#driver = "xkbevent"
+#format = "   $layout "
+#[block.mappings]
+#"English (US)" = "US"
+#"Arabic (Egypt)" = "EG"
+block = "custom"
+interval = 1
+command = '''
+layout=$(xkb-switch)
+if [ "$layout" = "us" ]; then
+  echo "  E"
+elif [ "$layout" = "ara(qwerty_digits)" ]; then
+  echo "  ع"
+else
+  echo "  ?"
+fi
+'''
+
+# Volume (Audio)
+[[block]]
+block = "sound"
+format = " $icon  $volume.eng(w:2) "
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+# Battery
+[[block]]
+block = "battery"
+interval = 10
+# Dynamic icon based on percentage (handled automatically by i3status-rs)
+# You just define the color thresholds below.
+# Default (discharging)
+format = " $icon $percentage.eng(w:2) ($time) "
+# When charging
+charging_format = " $icon $percentage.eng(w:2) ($time) "
+full_format = " $icon 100% "
+# When no battery
+missing_format = "  × "
+# Color thresholds (you can tweak these)
+info = 80        # green
+warning = 40     # yellow
+critical = 20    # red
+
+# Date & Time
+[[block]]
+block = "time"
+interval = 5
+format = "  $timestamp.datetime(f:'%Y/%m/%d %A  %l:%M') "
+
