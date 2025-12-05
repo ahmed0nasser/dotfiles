@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $term ghostty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -49,7 +50,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+q kill
@@ -202,6 +203,6 @@ assign [class="Brave-browser"] $ws2
 assign [class="obsidian"] $ws5
 
 # Execs
-exec --no-startup-id i3-sensible-terminal
+exec --no-startup-id $term
 exec --no-startup-id brave
 
