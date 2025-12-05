@@ -52,10 +52,10 @@ inactive_format = " $icon Down "
 block = "custom"
 interval = 1
 command = '''
-layout=$(xkb-switch)
+layout=$(localectl status | grep "X11 Layout" | sed "s/\s*X11 Layout:\s*//g")
 if [ "$layout" = "us" ]; then
   echo "  E"
-elif [ "$layout" = "ara(qwerty_digits)" ]; then
+elif [ "$layout" = "ara" ]; then
   echo "  ع"
 else
   echo "  ?"
