@@ -1,0 +1,110 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "auto_update": false,
+  "when_closing_with_no_tabs": "close_window",
+  "on_last_window_closed": "quit_app",
+  "use_system_prompts": false,
+  "use_system_path_prompts": false,
+  "active_pane_modifiers": {
+    "border_size": 0.0,
+    "inactive_opacity": 1.0
+  },
+  "debugger": {
+    "button": false
+  },
+  "search": {
+    "whole_word": false,
+    "button": false
+  },
+  "diagnostics": {
+    "button": false
+  },
+  "terminal": {
+    "button": false
+  },
+  "status_bar": {
+    "cursor_position_button": true,
+    "active_language_button": false
+  },
+  "git": {
+    "inline_blame": {
+      "show_commit_summary": false,
+      "enabled": false
+    }
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right",
+    "button": true
+  },
+  "zoomed_padding": true,
+  "preview_tabs": {
+    "enabled": true
+  },
+  "tabs": {
+    "file_icons": false,
+    "git_status": false
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show": false
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_sign_in": false,
+    "show_user_picture": true,
+    "show_onboarding_banner": false,
+    "show_project_items": true,
+    "show_branch_name": true,
+    "show_branch_icon": true
+  },
+  "project_panel": {
+    "hide_root": true,
+    "indent_guides": {
+      "show": "always"
+    },
+    "sticky_scroll": true,
+    "scrollbar": {
+      "show": "never"
+    },
+    "indent_size": 20.0,
+    "git_status": true,
+    "folder_icons": true,
+    "entry_spacing": "comfortable",
+    "file_icons": true,
+    "dock": "right",
+    "button": false
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "cursor_shape": "block",
+  "cursor_blink": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "vim_mode": true,
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 18.0,
+  "buffer_font_size": 18.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Gruvbox Dark Soft"
+  }
+}
