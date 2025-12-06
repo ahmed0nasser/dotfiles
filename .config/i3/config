@@ -191,12 +191,20 @@ bar {
         status_command i3status-rs
 }
 
+# Remove title bar
+default_border none
+default_floating_border none
+
 # Arabic Keyboard Layout
 exec --no-startup-id setxkbmap -model pc105 -layout us,ara -variant ,qwerty_digits -option grp:alt_shift_toggle
 
 # Binds
-bindsym $mod+shift+F12 exec shutdown now
-bindsym $mod+shift+F11 exec reboot
+# session managment
+bindsym $mod+Shift+F12 exec shutdown now
+bindsym $mod+Shift+F11 exec reboot
+# move between adjacent workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # Assigns
 assign [class="Brave-browser"] $ws2
