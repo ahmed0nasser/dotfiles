@@ -74,19 +74,14 @@ cmd = "pavucontrol"
 [[block]]
 block = "battery"
 interval = 10
-# Dynamic icon based on percentage (handled automatically by i3status-rs)
-# You just define the color thresholds below.
-# Default (discharging)
 format = " $icon $percentage.eng(w:2) ($time) "
-# When charging
 charging_format = " $icon $percentage.eng(w:2) ($time) "
 full_format = " $icon 100% "
-# When no battery
 missing_format = "  × "
-# Color thresholds (you can tweak these)
-info = 80        # green
-warning = 40     # yellow
-critical = 20    # red
+# Color thresholds
+#info = 80        # green
+#warning = 40     # yellow
+#critical = 20    # red
 
 # Date & Time
 [[block]]
@@ -94,3 +89,10 @@ block = "time"
 interval = 5
 format = "  $timestamp.datetime(f:'%Y/%m/%d %A  %l:%M') "
 
+# Salat
+[[block]]
+block = "custom"
+interval = 5
+command = '''
+ prayer-times --latitude 31.200092 --longitude 29.918739 --method Egyptian next | awk '{print "   " $2 " " $4 "  "}'
+'''

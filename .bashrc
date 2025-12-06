@@ -18,6 +18,8 @@ fi
 alias sudo='sudo '
 alias vim='nvim '
 alias pn=pnpm
+# prayer-times Alexandria, Egypt
+alias salah='prayer-times --latitude 31.200092 --longitude 29.918739 --method Egyptian '
 # freeoffice aliasses
 alias word=freeoffice-textmaker
 alias excel=freeoffice-planmaker
