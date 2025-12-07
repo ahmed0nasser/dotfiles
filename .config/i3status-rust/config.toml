@@ -1,6 +1,3 @@
-# i3status-rs configuration (for X11)
-# Includes: date/time, wifi, keyboard layout (US/EG), memory, CPU, battery, volume
-
 icons_format = "{icon}"
 
 [theme]
@@ -33,22 +30,15 @@ format = "  $mem_used.eng(prefix:Mi)/$mem_total.eng(prefix:Mi) "
 # Wi-Fi / Network
 [[block]]
 block = "net"
-# Set your interface name if needed (check with `ip link`)
 device = "wlan0"
-format = " $icon { $ssid ($signal_strength) | Wired } "
+format = " $icon { $ssid($signal_strength) | Wired } "
 missing_format = " $icon × Disconnected "
 inactive_format = " $icon Down "
 
 # Keyboard Layout (X11)
 [[block]]
-#block = "keyboard_layout"
-#driver = "xkbevent"
-#format = "   $layout "
-#[block.mappings]
-#"English (US)" = "US"
-#"Arabic (Egypt)" = "EG"
 block = "custom"
-interval = 1
+interval = 0.5
 command = '''
 layout=$(xkb-switch)
 if [ "$layout" = "us" ]; then
@@ -68,7 +58,7 @@ format = "  $brightness "
 [[block]]
 block = "sound"
 format = " $icon  $volume.eng(w:2) "
-#missing_format = " 󰝟 "
+error_format = " 󰝟 mute "
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
@@ -81,16 +71,12 @@ format = " $icon $percentage.eng(w:2) ($time) "
 charging_format = " $icon $percentage.eng(w:2) ($time) "
 full_format = " $icon 100% "
 missing_format = "  × "
-# Color thresholds
-#info = 80        # green
-#warning = 40     # yellow
-#critical = 20    # red
 
 # Date & Time
 [[block]]
 block = "time"
 interval = 5
-format = "  $timestamp.datetime(f:'%Y/%m/%d %A %l:%M') "
+format = "  $timestamp.datetime(f:'%Y/%m/%d %A  %l:%M') "
 
 # Salah
 [[block]]
