@@ -12,8 +12,6 @@ idle_fg = "#abcdef"
 [icons]
 icons = "awesome4"
 [icons.overrides]
-#bat = ["|E|", "|_|", "|=|", "|F|"]
-#bat_charging = "|^| "
 
 ###########
 # Blocks
@@ -25,12 +23,12 @@ block = "cpu"
 info_cpu = 20
 warning_cpu = 50
 critical_cpu = 90
-format = "  $utilization.eng(w:2) "
+format = "  $utilization.eng(w:2) "
 
 # Memory Usage
 [[block]]
 block = "memory"
-format = "  $mem_used.eng(prefix:Mi)/$mem_total.eng(prefix:Mi)($mem_used_percents.eng(w:2)) "
+format = "  $mem_used.eng(prefix:Mi)/$mem_total.eng(prefix:Mi) "
 
 # Wi-Fi / Network
 [[block]]
@@ -62,10 +60,15 @@ else
 fi
 '''
 
+[[block]]
+block = "backlight"
+format = "  $brightness "
+
 # Volume (Audio)
 [[block]]
 block = "sound"
 format = " $icon  $volume.eng(w:2) "
+#missing_format = " 󰝟 "
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
@@ -87,9 +90,9 @@ missing_format = "  × "
 [[block]]
 block = "time"
 interval = 5
-format = "  $timestamp.datetime(f:'%Y/%m/%d %A  %l:%M') "
+format = "  $timestamp.datetime(f:'%Y/%m/%d %A %l:%M') "
 
-# Salat
+# Salah
 [[block]]
 block = "custom"
 interval = 5
