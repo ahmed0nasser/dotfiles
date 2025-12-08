@@ -36,19 +36,23 @@ missing_format = " $icon × Disconnected "
 inactive_format = " $icon Down "
 
 # Keyboard Layout (X11)
+#[[block]]
+#block = "custom"
+#interval = 0.5
+#command = '''
+#layout=$(xkb-switch)
+#if [ "$layout" = "us" ]; then
+  #echo "  E"
+#elif [ "$layout" = "ara(qwerty_digits)" ]; then
+  #echo "  ع"
+#else
+  #echo "  ?"
+#fi
+#'''
 [[block]]
-block = "custom"
-interval = 0.5
-command = '''
-layout=$(xkb-switch)
-if [ "$layout" = "us" ]; then
-  echo "  E"
-elif [ "$layout" = "ara(qwerty_digits)" ]; then
-  echo "  ع"
-else
-  echo "  ?"
-fi
-'''
+block = "keyboard_layout"
+driver = "xkbevent"
+format = "   $layout "
 
 [[block]]
 block = "backlight"
