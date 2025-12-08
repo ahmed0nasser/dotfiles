@@ -209,6 +209,8 @@ bindsym $mod+Shift+F11 exec reboot
 # move between adjacent workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+# flameshot
+bindsym Print exec flameshot gui
 
 # Assigns
 assign [class="Brave-browser"] $ws2
