@@ -18,8 +18,10 @@ alias pn=pnpm
 # prayer-times Alexandria, Egypt
 alias salah='prayer-times --latitude 31.200092 --longitude 29.918739 --method Egyptian '
 
-# Make fzf use ripgrep
-if type rg &> /dev/null; then
-  export FZF_DEFAULT_COMMAND='rg --files'
-  export FZF_DEFAULT_OPTS='-m'
+
+# pnpm
+set -gx PNPM_HOME "/home/ahmed/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
 end
+# pnpm end
