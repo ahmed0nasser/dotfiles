@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+set -gx PATH "$PATH:$HOME/.local/bin/"
+
 # Enable Vi mode
 fish_vi_key_bindings
 # Cursor shapes for Vi modes
@@ -15,9 +17,6 @@ set -g fish_cursor_unknown   block
 alias sudo='sudo '
 alias vim='nvim '
 alias pn=pnpm
-# prayer-times Alexandria, Egypt
-alias salah='prayer-times --latitude 31.200092 --longitude 29.918739 --method Egyptian '
-
 
 # pnpm
 set -gx PNPM_HOME "/home/ahmed/.local/share/pnpm"

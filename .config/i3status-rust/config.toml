@@ -82,10 +82,18 @@ block = "time"
 interval = 5
 format = "  $timestamp.datetime(f:'%Y/%m/%d %A  %l:%M') "
 
-# Salah
+# bilal
 [[block]]
 block = "custom"
-interval = 5
+interval = 300
 command = '''
- prayer-times --latitude 31.200092 --longitude 29.918739 --method Egyptian next | awk '{print "   " $2 " " $4 "  "}'
+echo "  $(bilal next | awk '{print $1}') $(bilal current | grep -oE '[0-9]+:[0-9]+')"
 '''
+
+# prayer-times (DEPRECATED)
+#[[block]]
+#block = "custom"
+#interval = 5
+#command = '''
+#prayer-times --latitude 31.200092 --longitude 29.918739 --method Egyptian next | awk '{print "   " $2 " " $4 "  "}'
+#'''

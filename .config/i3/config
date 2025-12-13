@@ -214,7 +214,6 @@ bindsym Print exec flameshot gui
 
 # Assigns
 assign [class="Brave-browser"] $ws2
-assign [class="obsidian"] $ws5
 
 # Execs
 exec --no-startup-id $term
