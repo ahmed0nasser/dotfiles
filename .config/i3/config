@@ -196,7 +196,7 @@ default_border none
 default_floating_border none
 
 # Arabic Keyboard Layout
-exec --no-startup-id setxkbmap -model pc105 -layout us,ara -variant ,qwerty_digits -option grp:alt_shift_toggle
+exec --no-startup-id --always setxkbmap -model pc105 -layout us,ara -variant ,qwerty_digits -option grp:alt_shift_toggle
 
 # Control screen brightness with brightnessctl
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set +5%
