@@ -7,6 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "preferred_line_length": 80,
+  "toolbar": {
+    "code_actions": true,
+    "selections_menu": true,
+    "quick_actions": true,
+    "breadcrumbs": true
+  },
+  "scrollbar": {
+    "show": "auto"
+  },
+  "minimap": {
+    
+  },
+  "relative_line_numbers": "enabled",
+  "gutter": {
+    "min_line_number_digits": 0,
+    "line_numbers": true
+  },
   "auto_update": false,
   "when_closing_with_no_tabs": "close_window",
   "on_last_window_closed": "quit_app",
@@ -92,7 +110,7 @@
       "milliseconds": 1000
     }
   },
-  "cursor_shape": "block",
+  "cursor_shape": "bar",
   "cursor_blink": false,
   "telemetry": {
     "diagnostics": false,
@@ -105,6 +123,6 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Gruvbox Dark Soft"
+    "dark": "Ayu Dark"
   }
 }
