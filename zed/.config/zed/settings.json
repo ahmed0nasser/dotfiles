@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "languages": {
     "C": {
       "format_on_save": "on"
@@ -125,9 +126,5 @@
   "icon_theme": "Zed (Default)",
   "ui_font_size": 18.0,
   "buffer_font_size": 18.0,
-  "theme": {
-    "mode": "dark",
-    "light": "One Light",
-    "dark": "Ayu Dark"
-  }
+  "theme": "One Dark"
 }
