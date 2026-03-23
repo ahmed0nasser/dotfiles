@@ -35,6 +35,7 @@ function fish_prompt
 	set -g __fish_git_prompt_color_branch cyan
 	set -g __fish_git_prompt_color_dirtystate yellow
 	set -g __fish_git_prompt_color_stagedstate green
+	set -g __fish_git_prompt_color_cleanstate green
 	set -g __fish_git_prompt_color_untrackedfiles red
 	set -g __fish_git_prompt_color_upstream blue
     
