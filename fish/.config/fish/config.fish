@@ -17,6 +17,7 @@ set -g fish_cursor_unknown   block
 alias sudo='sudo '
 alias vim='nvim '
 alias pn=pnpm
+alias hx=helix
 
 # pnpm
 set -gx PNPM_HOME "/home/ahmed/.local/share/pnpm"
