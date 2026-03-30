@@ -127,6 +127,12 @@ window-rule {
     default-column-width {}
 }
 
+recent-windows {
+    binds {
+        // Remove Alt+Tab and Alt+` bindings
+    }
+}
+
 binds {
     // DMS binds
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -139,11 +145,11 @@ binds {
     Mod+M hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
-    Mod+N hotkey-overlay-title="Notepad" {
-        spawn "dms" "ipc" "call" "notepad" "toggle";
-    }
-    Mod+Shift+N hotkey-overlay-title="Night Mode" {
+    Mod+N hotkey-overlay-title="Night Mode" {
         spawn "dms" "ipc" "call" "night" "toggle";
+    }
+    Mod+B hotkey-overlay-title="Notepad" {
+        spawn "dms" "ipc" "call" "notepad" "toggle";
     }
     Mod+C hotkey-overlay-title="Color Picker" {
         spawn "dms" "color" "pick" "-a";
