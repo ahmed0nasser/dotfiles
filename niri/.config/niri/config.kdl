@@ -324,7 +324,7 @@ binds {
     Mod+Shift+P hotkey-overlay-title="Power off Monitors" { power-off-monitors; }
 
     Mod+Shift+F11 hotkey-overlay-title="Reboot" { spawn-sh "reboot"; }
-    Mod+Shift+F12 hotkey-overlay-title="Shutdown" { spawn-sh "shutdown now"; }
+    Mod+Shift+F12 hotkey-overlay-title="Shutdown" { spawn-sh "poweroff"; }
 }
 
 // DMS
