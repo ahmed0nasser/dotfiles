@@ -3,9 +3,11 @@ if status is-interactive
 end
 
 set -gx PATH "$PATH:$HOME/.local/bin/"
+set -gx EDITOR helix
 
 # Enable Vi mode
 fish_vi_key_bindings
+
 # Cursor shapes for Vi modes
 set -g fish_cursor_insert    line     # Insert mode → line cursor (like Neovim)
 set -g fish_cursor_default   block    # Normal mode → block cursor
