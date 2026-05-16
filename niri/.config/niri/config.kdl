@@ -1,5 +1,5 @@
 // Startups
-spawn-sh-at-startup "foot tmux"
+spawn-sh-at-startup "kitty tmux"
 spawn-at-startup "brave"
 
 /-environment {
@@ -162,7 +162,7 @@ binds {
         spawn "dms" "ipc" "call" "lock" "lock";
     }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     // Example volume keys mappings for PipeWire & WirePlumber.
     // "-l 1.0" limits the volume to 100%.
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+ -l 1.0"; }
