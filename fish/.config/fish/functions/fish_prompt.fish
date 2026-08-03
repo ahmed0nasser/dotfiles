@@ -11,7 +11,7 @@ function fish_prompt
     # ╰─ echo here
 
     # To:
-    # ┬─[dashboard]─[V:django20]─[ master↑1|●1✚1…1]
+    # ┬─[dashboard]─[ django20]─[ master↑1|●1✚1…1]
     # │ 2    15054    0%    arrêtée    sleep 100000
     # │ 1    15048    0%    arrêtée    sleep 100000
     # ╰─ echo there
@@ -64,7 +64,7 @@ function fish_prompt
     set -q VIRTUAL_ENV_DISABLE_PROMPT
     or set -g VIRTUAL_ENV_DISABLE_PROMPT true
     set -q VIRTUAL_ENV
-    and _prompt_wrapper $retc yellow "V:(path basename "$VIRTUAL_ENV")"
+    and _prompt_wrapper $retc yellow " $(basename $(dirname $VIRTUAL_ENV))"
 
     # git
     set -l prompt_git (fish_git_prompt '%s')
